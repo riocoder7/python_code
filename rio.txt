@@ -1,0 +1,160 @@
+
+import tkinter as tk
+from _tkinter import *
+
+root = tk.Tk() 
+
+root.title('rio.coder') 
+
+#backround red:-
+tk.Canvas(root,bg="green",width=500,height=500).pack() 
+tk.Label(root,text="hellow rio si r",font=("times",55)).pack()
+
+#message:=
+tk.Message( root, text="Hey!? How are you doing?" ).pack()
+
+#button :=
+tk.Button(root, text ="Hello thsi is button ", bg="yellow").pack()
+
+#label and entry box :=
+tk.Label(root,text="enter usernsme ").pack(side="left")
+tk.Entry(root,).pack(side="left")
+
+
+# cheakbox :=
+tk.Checkbutton(root, text = "Music",   height=5, width = 20).pack()
+tk.Checkbutton(root, text = "Video",   height=5, width = 20).pack()
+
+
+#readio button :=
+tk.Radiobutton(root, text="Option 1",value=1,).pack()
+tk.Radiobutton(root, text="Option 1",value=2,).pack()
+tk.Radiobutton(root, text="Option 1",value=3,).pack()
+tk.Radiobutton(root, text="Option 1",value=4,).pack()
+
+
+# scale := 
+tk.Scale( root, ).pack(anchor="center")
+
+root.mainloop()
+
+
+
+#### file hendile 
+
+ 1. # read data in  txt file 
+
+    f = open("/home/sarfaraz_alam/Music/python_code/ hassan.txt","r")
+    print(f.read())
+
+2. # write date in txt  file 
+
+    f =open("/home/sarfaraz_alam/Music/python_code/ hassan.txt","a")
+    f.write("this is extra data in hassan.txt file ")
+    f.close()
+
+3. # reopen file and read data 
+
+    f1 = open ("/home/sarfaraz_alam/Music/python_code/ hassan.txt", "r")
+    print(f1.read())
+    f1.close()   
+
+
+
+
+### class and objects :=
+
+#store the information of student and display the same 
+
+class  student :
+    def __init__(self,name,age ,sex,course):
+      self.name=name
+      self.age = age
+      self.sex = sex
+      self.course = course
+      
+
+
+    def rio(self):
+     
+      print("name is " + self.name)
+      print("age is  is "+ self.age)
+      print("sex is "+ self.sex)
+      print("course is "+ self.course)
+
+
+s1= student("rio","20","male","bscit")
+s1.rio()
+
+
+# concept of inheritance using python 
+
+class shape():
+  def __init__(self,x,y):
+    self.x = x
+    self.y = y
+
+  def area(self):
+    a = self.x * self.y
+    print(a)
+
+
+class square(shape): # inheritance ###
+  def __init__(self, x):
+    self.x = x
+
+  def area(self):
+    b = self.x * self.x
+    print(b)
+
+
+s1 = shape(12,34)
+s1.area()
+
+
+
+# Create a class called Numbers, which has a single class attribute called
+MULTIPLIER, and a constructor which takes the parameters x and y (these
+should all be numbers)
+
+
+class number :
+  def __init__ (self,x,y):
+    self.x = x
+    self.y = y
+
+  def add(self):
+    a  = self.x + self.y
+    print("\n \n addtion is ",a)
+
+  def multiplay(self):
+    b = self.x * self.y
+    print("\n \n \n multiplication is ",b)
+
+
+ab = number(5.7,9.3)
+ab.add()
+ab.multiplay()
+
+
+
+
+
+
+# exception handling.
+
+
+import sys
+randomList = ['a', 0, 2]
+for entry in randomList:
+  try:
+     print("The entry is", entry)
+     r = 1/int(entry)
+     break
+  except:
+      print("Oops!",sys.exc_info()[0],"occured.")
+      print("Next entry.")
+      print()
+print("The reciprocal of",entry,"is",r)
+
+

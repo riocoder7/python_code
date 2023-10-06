@@ -1,0 +1,1 @@
+list.remove(list[0])

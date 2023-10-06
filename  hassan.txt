@@ -1,0 +1,88 @@
+this is txt file 
+
+hey how are you:
+this is extra data in hassan.txt file 
+
+#red background :-
+
+import tkinter as tk
+from _tkinter import *
+root = tk.Tk() 
+ root.title('Counting Seconds') 
+ tk.Canvas(root,bg="green",width=500,height=500).pack() 
+ tk.Label(root,text="hellow rio si r",font=("times",55)).pack()
+ root.mainloop()
+
+ # message box 
+
+import tkinter as tk
+from _tkinter import *
+root = tk.Tk() 
+  tk.Message( root, text="Hey!? How are you doing?" ).pack()
+  root.mainloop()
+
+
+# button in python 
+
+import Tkinter as tk
+import tkMessageBox
+root = tk.Tk()
+
+    def helloCallBack():
+        tkMessageBox.showinfo( "Hello Python", "Hello World")
+    
+tk.Button(top, text ="Hello thsi is button ", ).pack()
+root.mainloop()
+
+
+# entry box :=
+
+import tkinter as tk
+from _tkinter import *
+root = tk.Tk() 
+
+tk.Label(root,text="enter usernsme ").pack(side="left")
+tk.Entry(root,).pack(side="left")
+
+root.mainloop()
+
+
+
+# cheakbox := 
+
+import tkinter as tk
+from _tkinter import *
+
+root = tk.Tk() 
+tk.Checkbutton(root, text = "Music",   height=5, width = 20).pack()
+tk.Checkbutton(root, text = "Video",    height=5, width = 20).pack()
+root.mainloop()
+
+
+# radio button := 
+
+import tkinter as tk
+from _tkinter import *
+
+root = tk.Tk() 
+
+tk.Radiobutton(root, text="Option 1",value=1,).pack()
+tk.Radiobutton(root, text="Option 1",value=2,).pack()
+tk.Radiobutton(root, text="Option 1",value=3,).pack()
+tk.Radiobutton(root, text="Option 1",value=4,).pack()
+
+
+
+root.mainloop()
+
+
+#saclar :=
+
+
+import tkinter as tk
+from _tkinter import *
+
+root = tk.Tk() 
+tk.Scale( root, ).pack(anchor="center")
+
+root.mainloop()
